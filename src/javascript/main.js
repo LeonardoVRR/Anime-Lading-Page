@@ -24,8 +24,8 @@ index_page_container.forEach( (item, index) => {
                 main_container.classList.add("nextSlide")
                 main_container.setAttribute("style", `left: ${final}dvw;`)
 
-                console.log(`Conta Pos. inicial: ${inicial}`)
-                console.log(`Conta Pos. final: ${final}`)
+                // console.log(`Conta Pos. inicial: ${inicial}`)
+                // console.log(`Conta Pos. final: ${final}`)
 
             }
 
@@ -40,8 +40,8 @@ index_page_container.forEach( (item, index) => {
                 main_container.classList.add("prevSlide")
                 main_container.setAttribute("style", `left: ${final}dvw;`)
 
-                console.log(`Conta Pos. inicial: ${inicial}`)
-                console.log(`Conta Pos. final: ${final}`)
+                // console.log(`Conta Pos. inicial: ${inicial}`)
+                // console.log(`Conta Pos. final: ${final}`)
 
             }
 
@@ -58,10 +58,10 @@ index_page_container.forEach( (item, index) => {
             const main_start_position = getComputedStyle(document.documentElement).getPropertyValue('--startPosition')
             const main_finish_position = getComputedStyle(document.documentElement).getPropertyValue('--finishPosition')
 
-            console.log(`>--------------------------<\nPosição inicial: ${main_start_position}`)
-            console.log(`Posição final: ${main_finish_position}`)
-            console.log(`Indice atual: ${index}`)
-            console.log(`Indice antigo: ${previousIndexNumber}\n>--------------------------<`)
+            // console.log(`>--------------------------<\nPosição inicial: ${main_start_position}`)
+            // console.log(`Posição final: ${main_finish_position}`)
+            // console.log(`Indice atual: ${index}`)
+            // console.log(`Indice antigo: ${previousIndexNumber}\n>--------------------------<`)
 
         }
 
