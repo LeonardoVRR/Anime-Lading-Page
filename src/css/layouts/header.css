@@ -1,0 +1,91 @@
+.menu {
+    background-color: black;
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    padding: 20px 10px;
+
+    font-family: "Autour One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    position: relative;
+}
+
+.logo {
+    margin-right: 170px;
+    width: 5dvw;
+}
+
+.menu_options {
+    display: flex;
+    flex-flow: row;
+    gap: 15%;
+
+    margin-right: 20px;
+}
+
+.menu_options > a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu_options > a:hover {
+    text-decoration: underline;
+}
+
+.position_container {
+    position: absolute;
+    right: 20px;
+
+    display: flex;
+    gap: 30px;
+}
+
+.search_anime {
+    background-color: #323232;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.search_anime > button {
+    background-color: #32323200;
+    border: none;
+}
+
+.search_anime > button > i {
+    color: white;
+}
+
+.search_anime > input[type="text"] {
+    padding: 5px;
+    height: 100%;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 0, 0);
+}
+
+.search_anime > input::placeholder {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.join_now_btn {
+    background: linear-gradient(180deg, rgba(5,0,255,1) 0%, rgba(160,158,255,0.38) 100%, rgba(255,255,255,0) 100%);
+
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px 0;
+
+    font-size: 1.1rem;
+    transition: all 0.3s linear;
+}
+
+.join_now_btn:active {
+    scale: 0.9;
+    opacity: 0.8;
+}

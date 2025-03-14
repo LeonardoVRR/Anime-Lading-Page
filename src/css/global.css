@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --startPosition: -100;
+    --finishPosition: -200;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 95dvh;
+    overflow: hidden;
+}
+
+body button {
+    cursor: pointer;
+}
+
+main {
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: calc(100dvw * 3);
+    height: 100%;
+
+    position: relative;
+    left: 0px;
+}
+
+.anime_area {
+    padding-left: 20px;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100dvw;
+    height: 100%;
+
+    position: absolute;
+}
+
+.anime_area * {
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+}
+
+#anime_area_1 {
+    background: url("../assets/img/backgrounds/Solo Leveling background.png") no-repeat center;
+    background-size: cover;
+
+    left: 0;
+}
+
+#anime_area_2 {
+    background: url("../assets/img/backgrounds/attack on titan background.png") no-repeat center;
+    background-size: cover;
+    left: 100dvw;
+}
+
+#anime_area_3 {
+    background: url("../assets/img/backgrounds/jujutsu kaisen background.png") no-repeat center;
+    background-size: cover;
+
+    left: 200dvw;
+}
+
+.anime_name {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anime_genres {
+    display: flex;
+    gap: 10px;
+    /* margin: 15px 0; */
+}
+
+.anime_genres p {
+    border: 1px solid white;
+    padding: 0px 10px;
+    border-radius: 20px;
+}
+
+.anime_description {
+    width: 500px;
+}
+
+.anime_button_options {
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    width: 400px;
+}
+
+.watch_now_btn, .save_later_btn {
+
+    border: 2px solid white;
+    background-color: rgba(165, 42, 42, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+
+    font-size: 1.2rem;
+    border-radius: 0 40px;
+    user-select: none;
+
+    transition: all 0.3s linear;
+
+}
+
+.watch_now_btn img {
+    width: 25%;
+    max-width: 100%;
+    clip-path: circle(40%);
+    pointer-events: none;
+}
+
+.save_later_btn img {
+    width: 15%;
+    max-width: 100%;
+    pointer-events: none;
+}
+
+.watch_now_btn:hover, .save_later_btn:hover {
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+.watch_now_btn:active, .save_later_btn:active {
+    scale: 0.9;
+    opacity: 0.8;
+}
+
+/* ------------------------- configs. sombras ------------------------- */
+
+/* ------------------------- configs. footer ------------------------- */
+
+.index_page_container {
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    width: 100dvw;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.index_page {
+    padding: .3%;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+
+.index_page:hover {
+    background-color: rgb(211, 7, 7);
+}
+
+.current_index {
+    background-color: white;
+    padding: .6%;
+}
+
+/* ------------------------- animação slides ------------------------- */
+
+.nextSlide {
+    animation: nextSlide 4s linear forwards;
+}
+
+@keyframes nextSlide {
+    0% {
+        left: calc( (var(--startPosition) * 1dvw) );
+    }
+
+    100% {
+        left: calc( (var(--finishPosition) * 1dvw) );
+    }
+}
+
+.prevSlide {
+    animation: prevSlide 4s linear forwards;
+}
+
+@keyframes prevSlide {
+    0% {
+        left: calc( (var(--startPosition) * 1dvw) );
+    }
+
+    100% {
+        left: calc( (var(--finishPosition) * 1dvw) );
+    }
+}
