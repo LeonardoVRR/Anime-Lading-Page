@@ -12,6 +12,7 @@
     font-style: normal;
 
     position: relative;
+    z-index: 99999;
 }
 
 .logo {
