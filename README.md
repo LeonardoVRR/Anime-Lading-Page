@@ -1,5 +1,5 @@
 <h1 align="center">
-    Avaliador de animes
+    Anime Lading Page
 </h1>
 
 ## Índice
